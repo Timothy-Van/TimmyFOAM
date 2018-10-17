@@ -1,0 +1,110 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'UI/mainWindow.ui'
+#
+# Created by: PyQt5 UI code generator 5.9.2
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(800, 550)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 22))
+        self.menubar.setObjectName("menubar")
+        self.menuFile = QtWidgets.QMenu(self.menubar)
+        self.menuFile.setObjectName("menuFile")
+        self.menuGeometry = QtWidgets.QMenu(self.menubar)
+        self.menuGeometry.setObjectName("menuGeometry")
+        self.menuMesh = QtWidgets.QMenu(self.menubar)
+        self.menuMesh.setObjectName("menuMesh")
+        self.menuParameter = QtWidgets.QMenu(self.menubar)
+        self.menuParameter.setObjectName("menuParameter")
+        self.menuRun = QtWidgets.QMenu(self.menubar)
+        self.menuRun.setObjectName("menuRun")
+        self.menuPostprocessing = QtWidgets.QMenu(self.menubar)
+        self.menuPostprocessing.setObjectName("menuPostprocessing")
+        self.menuReport = QtWidgets.QMenu(self.menubar)
+        self.menuReport.setObjectName("menuReport")
+        self.menuHelp = QtWidgets.QMenu(self.menubar)
+        self.menuHelp.setObjectName("menuHelp")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+        self.toolBar = QtWidgets.QToolBar(MainWindow)
+        self.toolBar.setObjectName("toolBar")
+        MainWindow.addToolBar(QtCore.Qt.TopToolBarArea, self.toolBar)
+        self.actionSave_Configuration = QtWidgets.QAction(MainWindow)
+        self.actionSave_Configuration.setObjectName("actionSave_Configuration")
+        self.actionExit = QtWidgets.QAction(MainWindow)
+        self.actionExit.setObjectName("actionExit")
+        self.actionImport_Geometry = QtWidgets.QAction(MainWindow)
+        self.actionImport_Geometry.setObjectName("actionImport_Geometry")
+        self.actionImport = QtWidgets.QAction(MainWindow)
+        self.actionImport.setObjectName("actionImport")
+        self.actionDimension = QtWidgets.QAction(MainWindow)
+        self.actionDimension.setObjectName("actionDimension")
+        self.actionSave_Mesh = QtWidgets.QAction(MainWindow)
+        self.actionSave_Mesh.setObjectName("actionSave_Mesh")
+        self.actionFluid_Properties = QtWidgets.QAction(MainWindow)
+        self.actionFluid_Properties.setObjectName("actionFluid_Properties")
+        self.actionConstruction = QtWidgets.QAction(MainWindow)
+        self.actionConstruction.setObjectName("actionConstruction")
+        self.menuFile.addAction(self.actionSave_Configuration)
+        self.menuFile.addAction(self.actionExit)
+        self.menuGeometry.addAction(self.actionImport_Geometry)
+        self.menuMesh.addAction(self.actionImport)
+        self.menuMesh.addAction(self.actionDimension)
+        self.menuMesh.addAction(self.actionSave_Mesh)
+        self.menuParameter.addAction(self.actionFluid_Properties)
+        self.menuParameter.addAction(self.actionConstruction)
+        self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuGeometry.menuAction())
+        self.menubar.addAction(self.menuMesh.menuAction())
+        self.menubar.addAction(self.menuParameter.menuAction())
+        self.menubar.addAction(self.menuRun.menuAction())
+        self.menubar.addAction(self.menuPostprocessing.menuAction())
+        self.menubar.addAction(self.menuReport.menuAction())
+        self.menubar.addAction(self.menuHelp.menuAction())
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.menuFile.setTitle(_translate("MainWindow", "File"))
+        self.menuGeometry.setTitle(_translate("MainWindow", "Geometry"))
+        self.menuMesh.setTitle(_translate("MainWindow", "Mesh"))
+        self.menuParameter.setTitle(_translate("MainWindow", "Parameter"))
+        self.menuRun.setTitle(_translate("MainWindow", "Run"))
+        self.menuPostprocessing.setTitle(_translate("MainWindow", "Postprocessing"))
+        self.menuReport.setTitle(_translate("MainWindow", "Report"))
+        self.menuHelp.setTitle(_translate("MainWindow", "Help"))
+        self.toolBar.setWindowTitle(_translate("MainWindow", "toolBar"))
+        self.actionSave_Configuration.setText(_translate("MainWindow", "Save Configuration"))
+        self.actionExit.setText(_translate("MainWindow", "Exit"))
+        self.actionImport_Geometry.setText(_translate("MainWindow", "Import Geometry"))
+        self.actionImport.setText(_translate("MainWindow", "Import"))
+        self.actionDimension.setText(_translate("MainWindow", "Dimension"))
+        self.actionSave_Mesh.setText(_translate("MainWindow", "Save Mesh"))
+        self.actionFluid_Properties.setText(_translate("MainWindow", "Fluid Properties"))
+        self.actionConstruction.setText(_translate("MainWindow", "Construction"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
+
